@@ -1,0 +1,52 @@
+[gd_scene load_steps=12 format=3 uid="uid://djsv0s54ydscr"]
+
+[ext_resource type="Texture2D" uid="uid://du0y28u5xie74" path="res://assets/Explosion_A.png" id="1_en0aq"]
+[ext_resource type="Script" uid="uid://ct5yomtmrlv84" path="res://scripts/explosion.gd" id="1_tvgr8"]
+[ext_resource type="Texture2D" uid="uid://cghtwtqd7ow5g" path="res://assets/Explosion_B.png" id="2_5kypy"]
+[ext_resource type="Texture2D" uid="uid://dn1cjynwvnnet" path="res://assets/Explosion_C.png" id="3_tvgr8"]
+[ext_resource type="Texture2D" uid="uid://cgg436e4uq4q7" path="res://assets/Explosion_D.png" id="4_kha27"]
+[ext_resource type="Texture2D" uid="uid://b8qm02nhhpr13" path="res://assets/Explosion_E.png" id="5_mnbw3"]
+[ext_resource type="Texture2D" uid="uid://dd7b3xscmy6xr" path="res://assets/Explosion_F.png" id="6_x5k6o"]
+[ext_resource type="Texture2D" uid="uid://dh5km6g36qlmv" path="res://assets/Explosion_G.png" id="7_jeo85"]
+[ext_resource type="Texture2D" uid="uid://bhykfbqjr68ei" path="res://assets/Explosion_H.png" id="8_ocmg1"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_5kypy"]
+resource_local_to_scene = true
+resource_name = "explosion"
+frames = 8
+speed_scale = 5.0
+frame_0/texture = ExtResource("1_en0aq")
+frame_0/duration = 0.4
+frame_1/texture = ExtResource("2_5kypy")
+frame_1/duration = 0.4
+frame_2/texture = ExtResource("3_tvgr8")
+frame_2/duration = 0.4
+frame_3/texture = ExtResource("4_kha27")
+frame_3/duration = 0.4
+frame_4/texture = ExtResource("5_mnbw3")
+frame_4/duration = 0.4
+frame_5/texture = ExtResource("6_x5k6o")
+frame_5/duration = 0.4
+frame_6/texture = ExtResource("7_jeo85")
+frame_6/duration = 0.4
+frame_7/texture = ExtResource("8_ocmg1")
+frame_7/duration = 0.4
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5kypy"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[node name="explosion" type="Node2D"]
+script = ExtResource("1_tvgr8")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+use_parent_material = true
+emitting = false
+amount = 1
+sub_emitter = NodePath(".")
+texture = SubResource("AnimatedTexture_5kypy")
+lifetime = 0.3
+interp_to_end = 1.0
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_5kypy")

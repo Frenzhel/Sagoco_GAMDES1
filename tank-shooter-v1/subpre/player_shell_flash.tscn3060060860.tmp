@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxi6m0iringp8"]
+
+[ext_resource type="Texture2D" uid="uid://ciqaaln0lltpa" path="res://battle-tank/PNG/Effects/Flash_A_04.png" id="1_3bbun"]
+[ext_resource type="Script" uid="uid://hh4hiisnpemx" path="res://player_shell_flash.gd" id="1_yfbm3"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v1te5"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[node name="player_shell_flash" type="Node2D"]
+script = ExtResource("1_yfbm3")
+
+[node name="shell_flash" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 2
+sub_emitter = NodePath(".")
+texture = ExtResource("1_3bbun")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_v1te5")

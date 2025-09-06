@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://baahgxm3lgui7"]
+
+[ext_resource type="Script" uid="uid://qoxmf078f66f" path="res://scripts/enemy_shells.gd" id="1_a1q2m"]
+[ext_resource type="Texture2D" uid="uid://df02wirewdht8" path="res://assets/Medium_Shell.png" id="1_i5wyw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fxnp0"]
+radius = 8.0
+height = 16.0
+
+[node name="enemy_shells" type="Area2D" groups=["enemy"]]
+script = ExtResource("1_a1q2m")
+
+[node name="enemy_shell" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_i5wyw")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fxnp0")
+metadata/_edit_lock_ = true

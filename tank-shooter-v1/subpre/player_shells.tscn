@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://gwcvo51w2dfo"]
+
+[ext_resource type="Script" uid="uid://bmmh6oij3rndh" path="res://scripts/player_shells.gd" id="1_1a15c"]
+[ext_resource type="Texture2D" uid="uid://cstvt2ina1wvm" path="res://assets/Heavy_Shell.png" id="2_1a15c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u1lmk"]
+radius = 8.0
+height = 28.0
+
+[node name="player_shells" type="Area2D"]
+script = ExtResource("1_1a15c")
+
+[node name="player_shell" type="Sprite2D" parent="."]
+show_behind_parent = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1a15c")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 18)
+shape = SubResource("CapsuleShape2D_u1lmk")
+metadata/_edit_lock_ = true

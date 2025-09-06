@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://d1r31hgw6yoyu"]
+
+[ext_resource type="FontFile" uid="uid://blc6o3sbi2e76" path="res://assets/Branda-yolq.ttf" id="1_jn1d5"]
+
+[resource]
+default_font = ExtResource("1_jn1d5")
+default_font_size = 32

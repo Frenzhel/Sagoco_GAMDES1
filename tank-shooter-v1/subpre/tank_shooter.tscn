@@ -1,0 +1,196 @@
+[gd_scene load_steps=6 format=3 uid="uid://4u4rmnyhp1a"]
+
+[ext_resource type="PackedScene" uid="uid://b16u71svnhx5p" path="res://subpre/player.tscn" id="1_l3bos"]
+[ext_resource type="Script" uid="uid://b3jgqdknqccpw" path="res://scripts/tank_shooter.gd" id="1_symtc"]
+[ext_resource type="Texture2D" uid="uid://xeo5akgr85w6" path="res://assets/Hedge_C_01.png" id="2_cvy0g"]
+[ext_resource type="Texture2D" uid="uid://dvr6j15hnguab" path="res://assets/Hedge_C_02.png" id="3_bewk1"]
+[ext_resource type="Theme" uid="uid://d1r31hgw6yoyu" path="res://subpre/tank_theme.tres" id="5_bewk1"]
+
+[node name="tank_shooter" type="Node2D"]
+script = ExtResource("1_symtc")
+
+[node name="player" parent="." instance=ExtResource("1_l3bos")]
+position = Vector2(576, 544)
+
+[node name="enemy_timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="edges_walls" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="edge2" type="Sprite2D" parent="edges_walls"]
+position = Vector2(64, 584)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_cvy0g")
+
+[node name="edge4" type="Sprite2D" parent="edges_walls"]
+position = Vector2(64, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_cvy0g")
+
+[node name="edge5" type="Sprite2D" parent="edges_walls"]
+position = Vector2(1088, 64)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_cvy0g")
+
+[node name="edge3" type="Sprite2D" parent="edges_walls"]
+position = Vector2(1088, 584)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_cvy0g")
+
+[node name="wall1" type="Sprite2D" parent="edges_walls"]
+position = Vector2(192, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall2" type="Sprite2D" parent="edges_walls"]
+position = Vector2(320, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall3" type="Sprite2D" parent="edges_walls"]
+position = Vector2(448, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall4" type="Sprite2D" parent="edges_walls"]
+position = Vector2(576, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall5" type="Sprite2D" parent="edges_walls"]
+position = Vector2(704, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall7" type="Sprite2D" parent="edges_walls"]
+position = Vector2(832, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall23" type="Sprite2D" parent="edges_walls"]
+position = Vector2(960, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall8" type="Sprite2D" parent="edges_walls"]
+position = Vector2(1088, 192)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall9" type="Sprite2D" parent="edges_walls"]
+position = Vector2(1088, 320)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall10" type="Sprite2D" parent="edges_walls"]
+position = Vector2(1088, 448)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall22" type="Sprite2D" parent="edges_walls"]
+position = Vector2(1088, 456)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall11" type="Sprite2D" parent="edges_walls"]
+position = Vector2(960, 584)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall12" type="Sprite2D" parent="edges_walls"]
+position = Vector2(832, 584)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall13" type="Sprite2D" parent="edges_walls"]
+position = Vector2(704, 584)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall14" type="Sprite2D" parent="edges_walls"]
+position = Vector2(576, 584)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall15" type="Sprite2D" parent="edges_walls"]
+position = Vector2(448, 584)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall16" type="Sprite2D" parent="edges_walls"]
+position = Vector2(320, 584)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall17" type="Sprite2D" parent="edges_walls"]
+position = Vector2(192, 584)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall18" type="Sprite2D" parent="edges_walls"]
+position = Vector2(64, 448)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall21" type="Sprite2D" parent="edges_walls"]
+position = Vector2(64, 456)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall19" type="Sprite2D" parent="edges_walls"]
+position = Vector2(64, 320)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="wall20" type="Sprite2D" parent="edges_walls"]
+position = Vector2(64, 192)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bewk1")
+
+[node name="game_ui" type="Control" parent="."]
+custom_minimum_size = Vector2(1152, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_top = 20.0
+offset_right = 1152.0
+offset_bottom = 120.0
+theme = ExtResource("5_bewk1")
+
+[node name="score_label" type="Label" parent="game_ui"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "Score: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="restart_timer" type="Timer" parent="."]
+
+[connection signal="player_killed" from="player" to="." method="_on_player_player_killed"]
+[connection signal="timeout" from="enemy_timer" to="." method="_on_enemy_timer_timeout"]
+[connection signal="timeout" from="restart_timer" to="." method="_on_restart_timer_timeout"]
